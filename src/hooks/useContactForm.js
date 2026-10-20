@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { INITIAL_FORM, ALLOWED_QUERY_TYPES, SUCCESS_MESSAGE_MS, MESSAGES, } from "../config/formConfig";
 import { sanitizeFormData } from "../utils/sanitize";
 import { validateContactForm } from "../validators/contactValidator";
-import { sendContactForm } from "../services/contactService";
+import { sendContactForm } from "../services/contactServices";
 
 export default function useContactForm() {
   const [submit, setSubmit] = useState(false);
