@@ -159,6 +159,14 @@ button:active {
   background-color: #085c4d;
 }
 
+/* Gönderim sürerken tekrar tıklamayı engelle ve kullanıcıya göster */
+button:disabled {
+  background-color: #86A2A5;
+  border-color: #86A2A5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .success-message {
   position: absolute;
   top: 0;
@@ -316,4 +324,17 @@ button:active {
     border: 2px solid #0C7D69;
     background-color: #E0F1E8;
   } */
+}
+
+/* Honeypot: bot tuzağı. Gerçek kullanıcıya görünmez ve erişilemez.
+   display:none KULLANILMAZ, bazı botlar onu atlar. */
+.hp-field {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
 }
